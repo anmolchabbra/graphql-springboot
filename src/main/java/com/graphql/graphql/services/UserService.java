@@ -23,14 +23,14 @@ public class UserService {
         return userRepo.findAll();
     }
     //getting single user
-    public User getSingleUser(int userID) {
-        User user = userRepo.findById(userID).orElseThrow(ExceptionHelper :: throwResourceNotFoundException);
+    public User getSingleUser(int userId) {
+        User user = userRepo.findById(userId).orElseThrow(ExceptionHelper :: throwResourceNotFoundException);
         return user;
     }
     
     //updating user
-    public User updateUser(int userID, User user) {
-        User toChange = userRepo.findById(userID).orElseThrow(ExceptionHelper :: throwResourceNotFoundException);
+    public User updateUser(int userId, User user) {
+        User toChange = userRepo.findById(userId).orElseThrow(ExceptionHelper :: throwResourceNotFoundException);
         toChange.setName(user.getName());
         toChange.setEmail(user.getEmail());
         toChange.setPassword(user.getPassword());
