@@ -1,4 +1,4 @@
-# User Management GraphQL API
+# User Oeder Management GraphQL API
 
 ## Overview
 
